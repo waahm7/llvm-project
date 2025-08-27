@@ -8,7 +8,11 @@ set(LLVM_LINK_COMPONENTS
 add_toy_chapter(toyc-waqar
   toyc.cpp
   parser/AST.cpp
+  # mlir/MLIRGen.cpp
   mlir/Dialect.cpp
+
+  DEPENDS
+  ToyWaqarOpsIncGen
   )
 include_directories(include/)
 include_directories(${CMAKE_CURRENT_BINARY_DIR}/include/)
